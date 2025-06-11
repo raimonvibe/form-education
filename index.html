@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formspree Tutorial - Learn to Create Contact Forms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="tutorial-header">
+        <div class="tutorial-container">
+            <h1 class="tutorial-title">
+                <i class="fas fa-envelope"></i>
+                Formspree Tutorial
+            </h1>
+            <p class="tutorial-subtitle">Learn how to create contact forms without backend code</p>
+        </div>
+    </header>
+
+    <main class="tutorial-main">
+        <!-- Step 1: Introduction -->
+        <section class="tutorial-section">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">1</div>
+                    <div class="tutorial-step-content">
+                        <h2>What is Formspree?</h2>
+                        <p class="tutorial-description">
+                            Formspree is a service that allows you to create functional contact forms without writing backend code. 
+                            It handles form submissions and sends the data directly to your email.
+                        </p>
+                        <div class="tutorial-benefits">
+                            <h3>Benefits:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> No backend coding required</li>
+                                <li><i class="fas fa-check"></i> Spam protection included</li>
+                                <li><i class="fas fa-check"></i> Email notifications</li>
+                                <li><i class="fas fa-check"></i> Easy integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Sign Up Instructions -->
+        <section class="tutorial-section tutorial-section-alt">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">2</div>
+                    <div class="tutorial-step-content">
+                        <h2>Sign Up for Formspree</h2>
+                        <div class="tutorial-instructions">
+                            <ol class="tutorial-steps-list">
+                                <li>
+                                    <strong>Visit Formspree:</strong> Go to 
+                                    <a href="https://formspree.io" target="_blank" class="tutorial-link">
+                                        https://formspree.io <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </li>
+                                <li><strong>Click "Get Started"</strong> or "Sign Up" button</li>
+                                <li><strong>Create Account:</strong> Enter your email and create a password</li>
+                                <li><strong>Verify Email:</strong> Check your email and click the verification link</li>
+                                <li><strong>Create Form:</strong> Once logged in, click "New Form"</li>
+                                <li><strong>Get Your Endpoint:</strong> Copy your unique form endpoint URL</li>
+                            </ol>
+                        </div>
+                        <div class="tutorial-note">
+                            <i class="fas fa-lightbulb"></i>
+                            <strong>Note:</strong> Your form endpoint will look like: 
+                            <code>https://formspree.io/f/YOUR_FORM_ID</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Basic Form Example -->
+        <section class="tutorial-section">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">3</div>
+                    <div class="tutorial-step-content">
+                        <h2>Basic Form Structure</h2>
+                        <p class="tutorial-description">
+                            Here's a simple contact form structure. Replace <code>YOUR_FORM_ID</code> with your actual Formspree form ID:
+                        </p>
+                        
+                        <div class="tutorial-code-block">
+                            <div class="tutorial-code-header">
+                                <span>HTML</span>
+                                <button class="tutorial-copy-btn" onclick="copyCode('basic-form-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <pre id="basic-form-code"><code>&lt;form method="POST" action="https://formspree.io/f/YOUR_FORM_ID"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" name="name" id="name" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" name="email" id="email" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="form-group"&gt;
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea name="message" id="message" rows="5" required&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  
+  &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Advanced Form Example -->
+        <section class="tutorial-section tutorial-section-alt">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">4</div>
+                    <div class="tutorial-step-content">
+                        <h2>Advanced Form Example</h2>
+                        <p class="tutorial-description">
+                            Here's the enhanced form from your original code with educational class names:
+                        </p>
+                        
+                        <div class="tutorial-demo-form">
+                            <h3>Live Demo Form</h3>
+                            <p class="tutorial-demo-note">
+                                <i class="fas fa-info-circle"></i>
+                                This form uses a placeholder endpoint. Replace with your actual Formspree URL.
+                            </p>
+                            
+                            <form method="POST" action="https://formspree.io/f/xwplqeky" class="tutorial-form">
+                                <div class="tutorial-form-fields">
+                                    <div class="tutorial-field tutorial-field-half">
+                                        <label for="demo-name" class="tutorial-label">Name</label>
+                                        <input type="text" name="name" id="demo-name" class="tutorial-input" required />
+                                    </div>
+                                    <div class="tutorial-field tutorial-field-half">
+                                        <label for="demo-email" class="tutorial-label">Email</label>
+                                        <input type="email" name="email" id="demo-email" class="tutorial-input" required />
+                                    </div>
+                                    <div class="tutorial-field tutorial-field-full">
+                                        <label for="demo-category" class="tutorial-label">Reason for Contact</label>
+                                        <select name="category" id="demo-category" class="tutorial-select" required>
+                                            <option value="">- Please choose an option -</option>
+                                            <option value="Landing Page Request">Request a Landing Page</option>
+                                            <option value="General Inquiry">General Question or Message</option>
+                                            <option value="Support or Follow-up">Follow-up / Support</option>
+                                            <option value="Feedback">Give Feedback</option>
+                                            <option value="Other">Something Else</option>
+                                        </select>
+                                    </div>
+                                    <div class="tutorial-field tutorial-field-full">
+                                        <label class="tutorial-label">Priority</label>
+                                        <div class="tutorial-radio-group">
+                                            <div class="tutorial-radio-item">
+                                                <input type="radio" id="demo-priority-low" name="priority" value="Low" class="tutorial-radio" checked />
+                                                <label for="demo-priority-low" class="tutorial-radio-label">Low</label>
+                                            </div>
+                                            <div class="tutorial-radio-item">
+                                                <input type="radio" id="demo-priority-normal" name="priority" value="Normal" class="tutorial-radio" />
+                                                <label for="demo-priority-normal" class="tutorial-radio-label">Normal</label>
+                                            </div>
+                                            <div class="tutorial-radio-item">
+                                                <input type="radio" id="demo-priority-high" name="priority" value="High" class="tutorial-radio" />
+                                                <label for="demo-priority-high" class="tutorial-radio-label">High</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tutorial-field tutorial-field-full">
+                                        <div class="tutorial-checkbox-group">
+                                            <input type="checkbox" id="demo-human" name="human" class="tutorial-checkbox" />
+                                            <label for="demo-human" class="tutorial-checkbox-label">I am not a robot</label>
+                                        </div>
+                                    </div>
+                                    <div class="tutorial-field tutorial-field-full">
+                                        <label for="demo-message" class="tutorial-label">Message</label>
+                                        <textarea name="message" id="demo-message" rows="5" placeholder="Enter your message" class="tutorial-textarea" required></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="tutorial-submit-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: CSS Styling -->
+        <section class="tutorial-section">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">5</div>
+                    <div class="tutorial-step-content">
+                        <h2>CSS Styling</h2>
+                        <p class="tutorial-description">
+                            Add these educational CSS classes to style your form:
+                        </p>
+                        
+                        <div class="tutorial-code-block">
+                            <div class="tutorial-code-header">
+                                <span>CSS</span>
+                                <button class="tutorial-copy-btn" onclick="copyCode('css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <pre id="css-code"><code>/* Tutorial Form Styles */
+.tutorial-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tutorial-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-field-half {
+  flex: 1;
+  min-width: 250px;
+}
+
+.tutorial-field-full {
+  flex: 1 1 100%;
+}
+
+.tutorial-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.tutorial-input,
+.tutorial-select,
+.tutorial-textarea {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.tutorial-input:focus,
+.tutorial-select:focus,
+.tutorial-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.tutorial-submit-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.tutorial-submit-btn:hover {
+  transform: translateY(-2px);
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 6: Implementation Guide -->
+        <section class="tutorial-section tutorial-section-alt">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">6</div>
+                    <div class="tutorial-step-content">
+                        <h2>Implementation Steps</h2>
+                        <div class="tutorial-checklist">
+                            <h3>Follow these steps to implement your form:</h3>
+                            <div class="tutorial-checklist-item">
+                                <input type="checkbox" id="step1" class="tutorial-checklist-checkbox">
+                                <label for="step1" class="tutorial-checklist-label">
+                                    Sign up for Formspree account
+                                </label>
+                            </div>
+                            <div class="tutorial-checklist-item">
+                                <input type="checkbox" id="step2" class="tutorial-checklist-checkbox">
+                                <label for="step2" class="tutorial-checklist-label">
+                                    Create a new form in Formspree dashboard
+                                </label>
+                            </div>
+                            <div class="tutorial-checklist-item">
+                                <input type="checkbox" id="step3" class="tutorial-checklist-checkbox">
+                                <label for="step3" class="tutorial-checklist-label">
+                                    Copy your form endpoint URL
+                                </label>
+                            </div>
+                            <div class="tutorial-checklist-item">
+                                <input type="checkbox" id="step4" class="tutorial-checklist-checkbox">
+                                <label for="step4" class="tutorial-checklist-label">
+                                    Replace "YOUR_FORM_ID" in the HTML code
+                                </label>
+                            </div>
+                            <div class="tutorial-checklist-item">
+                                <input type="checkbox" id="step5" class="tutorial-checklist-checkbox">
+                                <label for="step5" class="tutorial-checklist-label">
+                                    Add the CSS styles to your stylesheet
+                                </label>
+                            </div>
+                            <div class="tutorial-checklist-item">
+                                <input type="checkbox" id="step6" class="tutorial-checklist-checkbox">
+                                <label for="step6" class="tutorial-checklist-label">
+                                    Test your form by submitting a test message
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 7: Tips and Best Practices -->
+        <section class="tutorial-section">
+            <div class="tutorial-container">
+                <div class="tutorial-step">
+                    <div class="tutorial-step-number">7</div>
+                    <div class="tutorial-step-content">
+                        <h2>Tips & Best Practices</h2>
+                        <div class="tutorial-tips">
+                            <div class="tutorial-tip">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Spam Protection</h4>
+                                    <p>Formspree includes built-in spam protection. You can also add a honeypot field for extra security.</p>
+                                </div>
+                            </div>
+                            <div class="tutorial-tip">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>Mobile Responsive</h4>
+                                    <p>Always test your forms on mobile devices. Use flexible layouts and appropriate input types.</p>
+                                </div>
+                            </div>
+                            <div class="tutorial-tip">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Form Validation</h4>
+                                    <p>Use HTML5 validation attributes like 'required', 'type="email"', and 'pattern' for better user experience.</p>
+                                </div>
+                            </div>
+                            <div class="tutorial-tip">
+                                <i class="fas fa-envelope-open-text"></i>
+                                <div>
+                                    <h4>Custom Thank You Page</h4>
+                                    <p>Create a custom thank you page and redirect users after form submission for better UX.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tutorial-footer">
+        <div class="tutorial-container">
+            <p>&copy; 2024 Formspree Tutorial. Created for educational purposes.</p>
+            <p>
+                <a href="https://formspree.io" target="_blank" class="tutorial-footer-link">
+                    Visit Formspree <i class="fas fa-external-link-alt"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

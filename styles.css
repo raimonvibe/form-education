@@ -1,0 +1,589 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Tutorial Header */
+.tutorial-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.tutorial-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tutorial-title i {
+    color: #667eea;
+}
+
+.tutorial-subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+/* Main Content */
+.tutorial-main {
+    padding: 4rem 0;
+}
+
+.tutorial-section {
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.tutorial-section-alt {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Tutorial Steps */
+.tutorial-step {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.tutorial-step-number {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.tutorial-step-content {
+    flex: 1;
+}
+
+.tutorial-step-content h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tutorial-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Benefits List */
+.tutorial-benefits {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+}
+
+.tutorial-benefits h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.tutorial-benefits ul {
+    list-style: none;
+}
+
+.tutorial-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.tutorial-benefits li i {
+    color: #28a745;
+    font-size: 0.9rem;
+}
+
+/* Instructions */
+.tutorial-instructions {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.tutorial-steps-list {
+    counter-reset: step-counter;
+}
+
+.tutorial-steps-list li {
+    counter-increment: step-counter;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.tutorial-steps-list li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #667eea;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tutorial-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.tutorial-link:hover {
+    color: #764ba2;
+}
+
+.tutorial-note {
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tutorial-note i {
+    color: #1976d2;
+    margin-top: 0.2rem;
+}
+
+.tutorial-note code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* Code Blocks */
+.tutorial-code-block {
+    background: #2d3748;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-code-header {
+    background: #4a5568;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.tutorial-copy-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.tutorial-copy-btn:hover {
+    background: #764ba2;
+}
+
+.tutorial-code-block pre {
+    padding: 1.5rem;
+    margin: 0;
+    overflow-x: auto;
+    background: #2d3748;
+}
+
+.tutorial-code-block code {
+    color: #e2e8f0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Demo Form */
+.tutorial-demo-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.tutorial-demo-form h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tutorial-demo-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #856404;
+}
+
+.tutorial-demo-note i {
+    color: #f39c12;
+}
+
+/* Form Styles */
+.tutorial-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tutorial-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.tutorial-field-half {
+    flex: 1;
+    min-width: 250px;
+}
+
+.tutorial-field-full {
+    flex: 1 1 100%;
+}
+
+.tutorial-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.tutorial-input,
+.tutorial-select,
+.tutorial-textarea {
+    padding: 0.75rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+}
+
+.tutorial-input:focus,
+.tutorial-select:focus,
+.tutorial-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.tutorial-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Radio and Checkbox Groups */
+.tutorial-radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.tutorial-radio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tutorial-radio {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.tutorial-radio-label {
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+}
+
+.tutorial-checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tutorial-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.tutorial-checkbox-label {
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+}
+
+.tutorial-submit-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tutorial-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Checklist */
+.tutorial-checklist {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.tutorial-checklist h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.tutorial-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.tutorial-checklist-item:hover {
+    background: #f0f8ff;
+}
+
+.tutorial-checklist-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #667eea;
+}
+
+.tutorial-checklist-label {
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Tips */
+.tutorial-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.tutorial-tip {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-tip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-tip i {
+    font-size: 2rem;
+    color: #667eea;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.tutorial-tip h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.tutorial-tip p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer */
+.tutorial-footer {
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.tutorial-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.tutorial-footer-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.tutorial-footer-link:hover {
+    color: #764ba2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tutorial-container {
+        padding: 0 1rem;
+    }
+    
+    .tutorial-title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .tutorial-step {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+    }
+    
+    .tutorial-step-number {
+        align-self: flex-start;
+    }
+    
+    .tutorial-form-fields {
+        flex-direction: column;
+    }
+    
+    .tutorial-field-half {
+        min-width: auto;
+    }
+    
+    .tutorial-radio-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tutorial-tips {
+        grid-template-columns: 1fr;
+    }
+    
+    .tutorial-code-block pre {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorial-main {
+        padding: 2rem 0;
+    }
+    
+    .tutorial-section {
+        padding: 2rem 0;
+    }
+    
+    .tutorial-step {
+        padding: 1.5rem;
+    }
+    
+    .tutorial-form {
+        padding: 1.5rem;
+    }
+}
