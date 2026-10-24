@@ -93,6 +93,7 @@ body {
 
 .tutorial-step-content {
     flex: 1;
+    min-width: 0;
 }
 
 .tutorial-step-content h2 {
@@ -210,6 +211,8 @@ body {
     border-radius: 4px;
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 /* Code Blocks */
@@ -336,6 +339,8 @@ body {
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     font-family: inherit;
+    width: 100%;
+    min-width: 0;
 }
 
 .tutorial-input:focus,
@@ -582,6 +587,7 @@ body {
     
     .tutorial-step {
         flex-direction: column;
+        align-items: stretch;
         padding: 2rem;
         gap: 1rem;
     }
@@ -607,6 +613,14 @@ body {
         grid-template-columns: 1fr;
     }
     
+    .tutorial-note {
+        display: block;
+    }
+    
+    .tutorial-note i {
+        margin-right: 0.25rem;
+    }
+    
     .tutorial-code-block pre {
         padding: 1rem;
         font-size: 0.8rem;
@@ -622,11 +636,19 @@ body {
         padding: 2rem 0;
     }
     
+    .tutorial-container {
+        padding: 0 0.75rem;
+    }
+    
     .tutorial-step {
-        padding: 1.5rem;
+        padding: 1.25rem;
+    }
+    
+    .tutorial-demo-form {
+        padding: 1rem;
     }
     
     .tutorial-form {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 }
