@@ -1,3 +1,4 @@
+# Forced Dependabot check: 2026-11-11T10:54:48Z
 # Dependabot keeps the GitHub Actions in .github/workflows up to date.
 # This site is plain HTML/CSS/JS with no package manager, so there is no npm entry;
 # check the Font Awesome CDN version in index.html by hand.
